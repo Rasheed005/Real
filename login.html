@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>form</title>
+  <link rel="icon" href="images/logo.jpg">
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="last.css">
+  <script src="Pop_up.js"> </script>
+  <script src="http://kit.fontawesome.com/99b6368fab.js" crossorigin="anonymous"></script>
+</head>
+
+
+
+<section>
+  <div class="header">
+    <h2> </h2>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+      <meta charset="UTF-8">
+      <title>Page title</title>
+    </head>
+
+  </div>
+</section>
+<header>
+
+</header>
+
+<body>
+
+  <div class="hero" id="container">
+
+    <form name=" " action="  " method="post" onSubmit="return doLogin()">
+      <header> <marquee> WELCOME TO FEDERAL POLYTECHNIC ILARO WIFI WEB  </marquee> </header>
+      <h1 class="glow"> <span>Let's get you</span> Connected</h1>
+
+      <div class="input-group">
+        <input type="text" id="changeDemo" required>
+        <label for="name"> &#9998; UserName</label>
+      </div>
+
+
+      <div class="input-group">
+        <input type="password" id="password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+        <label for="password"> &#9998; Password </label>
+      </div>
+
+         <div class="log__in">
+        
+        <button class="button" id="modal-btn"  onclick="pop2()" > LOG IN</button>
+        <span> Don't have an acccount ? <b><u>  <a href="SINGIN2.html">SIGN UP
+            </a></u></b></span>
+        <br>
+          </div>
+        
+          <div id="my-modal" class="modal">
+            <div class="modal-content">
+              <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Dear User</h2>
+              </div>
+              <div class="modal-body">
+                <p> You are now connected to the internet </p>
+                
+                
+              </div>
+            </div>
+          </div>
+      
+          <script src="script.js"></script>
+
+
+
+      <div class="wrapper">
+        <p class="copy-footer-29">
+        <footer>© 2023 designed by N/CS/21/3008 </footer>
+        </p>
+      </div>
+       
+      <script>
+                        // Get DOM Elements
+            const modal = document.querySelector('#my-modal');
+            const modalBtn = document.querySelector('#modal-btn');
+            const closeBtn = document.querySelector('.close');
+
+            // Events
+            modalBtn.addEventListener('click', openModal);
+            closeBtn.addEventListener('click', closeModal);
+            window.addEventListener('click', outsideClick);
+
+            // Open
+            function openModal() {
+              modal.style.display = 'block';
+            }
+
+            // Close
+            function closeModal() {
+              modal.style.display = 'none';
+            }
+
+            // Close If Outside Click
+            function outsideClick(e) {
+              if (e.target == modal) {
+                modal.style.display = 'none';
+              }
+            }
+        
+      </script> 
+    </form>
+  </div>
+</body>
+
+</html>

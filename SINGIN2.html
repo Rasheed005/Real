@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>form</title>
+    <link rel="icon" href="images/logo.jpg">
+    <link rel="stylesheet" href="signup.css"> 
+    <script src="http://kit.fontawesome.com/99b6368fab.js" crossorigin="anonymous"></script>
+    <!-- <script src="Pop_up.js"></script> -->
+    <sript src="./dataB.js"></sript>
+    <style>
+        .d-0{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <sript src="dataB.js"></sript> 
+    <section>
+        <div class="header">
+            <h2></h2>
+<!DOCTYPE html>
+        <html lang="en">
+        <head>
+        				
+        				<title>Page title</title>
+                        
+        </head>
+ 
+        </div>
+    </section>
+
+
+    <div class="hero"  id="container">
+        <form  id="mylove"   action=" " method="post" >
+            <!-- https://myqrweb-fb8be-default-rtdb.firebaseio.com/" -->
+            <div class="alert">Your details has been successfully sent</div>
+            
+
+            <div class="input-group">
+                <input type="text" id="name" rows="11" onchange=upperCase()  required>
+                <label for="name"> &#9998; First Name</label>
+            </div>
+
+            <!-- <div class="input-group">
+                <input type="text" id="fname" onchange=upperCase()  required>
+                <label for="name"> &#9998; Last Name</label>
+            </div>  -->
+
+            <div class="input-group">
+                <input type="text"  id="file"  required>
+                <label for="file"> &#9998; File No. or Matric No. </label>
+            </div>
+
+            <!-- <div class="input-grouping">
+                <p><b>STAFF:</b></p> 
+
+                <label class="checking">Academic
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                 <label class="checking"> Non-Academic
+                    <input type="checkbox">
+                    <span class="checkmark"></span> 
+                 </label>
+
+            </div> -->
+
+            <div class="input-group" >
+                <select  id="department">
+                    <option value="" disabled selected hidden>  --Department -- </option value="" disabled selected hidden>
+                    <option value=" Accountancy">Accountancy </option>
+                    <option value="Arts and Design "> Arts and Design  </option>
+                    <option value=" Architecture and Bio-Environmental Engineering "> Architecture and Bio-Environmental Engineering </option>
+                    <option value=" Agricultural Technology"> Agricultural Technology </option>
+                    <option value=" Banking and Finance"> Banking and Finance</option>
+                    <option value="  Building Technology"> Building Technology</option>
+                    <option value=" Business Administration and Management"> Business Administration and Management </option>
+                    <option value="Civil Engineering "> Civil Engineering </option>
+                    <option value=" Computer Engineering"> Computer Engineering</option> 
+                    <option value=" Computer Science"> Computer Science  </option>
+                    <option value=" Electrical/Electronic Engineering"> Electrical/Electronic Engineering </option>
+                    <option value=" Estate Managementand Valuation"> Estate Managementand Valuation</option>
+                    <option value=" Food Technology "> Food Technology</option>
+                    <option value="Hospitality Management Technology "> Hospitality Management Technology</option>
+                    <option value=" Insurance"> Insurance</option>
+                    <option value=" Leisure And Tourism Management"> Leisure And Tourism Management</option>
+                    <option value=" Marketing"> Marketing</option>
+                    <option value="  Mass Communication"> Mass Communication</option>
+                    <option value=" Mechanical Engineering "> Mechanical Engineering </option>
+                    <option value=" Mechatronics Engineering"> Mechatronics Engineering</option> 
+                    <option value=" Mathematics and Statistics "> Mathematics and Statistics  </option>
+                    <option value=" Nutrition And Dietetics"> Nutrition And Dietetics</option>
+                    <option value="Office Technology And Management "> Office Technology And Management</option>
+                     <option value=" Public Administration "> Public Administration</option>
+                      <option value=" Quantity Surveying"> Quantity Surveying </option>
+                      <option value=" Surveying and Geo-Infomatics"> Surveying and Geo-Infomatics</option>
+                       <option value=" Science Laboratory Technology "> Science Laboratory Technology</option>
+                        <option value="Taxation "> Taxation </option>
+                        <option value=" Transportation Planning and Management"> Transportation Planning and Management</option>
+                         <option value="Urban and Regional Planning">Urban and Regional Planning </option>
+                           <option value=" Welding and Fabrication Engineering"> Welding and Fabrication Engineering</option>
+                           
+                             <option value=" "> </option>
+                </select>
+
+            </div>
+
+
+            <div class="input-group">
+                <input type="phone-number" id="number" required>
+                <label for="number"> &#9743; Phone No.</label>
+
+
+            </div>
+
+
+            <div class="input-group">
+                <input type="email" id="email" required>
+                <label for="email"> &#9993; Email Id</label>
+            </div>
+
+
+            <div class="input-group">
+                <select id="sex">
+
+                    <option value="" disabled selected hidden> &#9762; Gender</option value="" disabled selected hidden>
+                    <option value="male"> &male; Male</option>
+                    <option value="female"> &female; Female</option>
+                    <option value="other">Other</option>
+                </select>
+
+            </div>
+            <div class="input-group"> 
+                <select id="device">
+
+                  <option value="" disabled selected hidden> &#9762; SELECT DEVICE</option value="" disabled selected hidden>
+                  <option value="phone"> &phone; PHONE </option>
+                  <option value="laptop"> &lap; LAPTOP</option>
+                  <option value="Tablet"> TABLET</option>
+                  <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <input type="number&amp;letter" id="MAC" required>
+                <label for="MAC"> &#9743; MAC Address of your device</label>
+
+            </div>
+
+
+                 <div class="input-group">
+                        <input type="password"   id="password" onclick="password()" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                        <span id="password-span" class="d-0"> Password must be greater than 8 and must contain letters,digits and maximum of 16 characters  </span>
+                    <label for="password"> &#9743; Password </label>
+                 </div>
+
+                  
+  
+               
+
+                <!-- <div class="input-grouping">
+
+                    <label for="img"> :</label>
+
+                    <input type="file" id="img"  name="img" accept="image/*" required>
+                    <span>Click here to upload a whitebackground passport </span>
+                </div> -->
+
+               <div class="sub_in">
+                  <button type="submit" class="button"   id="modal-btn"  a href="login.html">  SUBMIT </button>
+              </div>
+
+                <div id="my-modal" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close">&times;</span>
+                            <h2>Dear User</h2>
+                        </div>
+                        <div class="modal-body">
+                            <p>Thanks for Signing up </p>
+                            <p> Your <B>Email </B> is your Username , </p>
+                            <p> Kindly login in the next 5 minutes</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            
+                <script src="script.js"></script>
+
+
+              
+
+
+            <script>
+
+                var pas,pas2
+                pas=0,pas2=0
+              
+        
+                    setInterval(()=>{
+                    var doc=document.getElementById("password").value
+                    if(doc.length < 8){
+                        pas=0
+                        document.getElementById("password-span").classList.remove("d-0")
+                        
+                    }
+                    else{
+                        pas=1
+                        document.getElementById("password-span").classList.add("d-0")
+                    }
+                },100)
+
+                                    // Get DOM Elements
+                    const modal = document.querySelector('#my-modal');
+                    const modalBtn = document.querySelector('#modal-btn');
+                    const closeBtn = document.querySelector('.close');
+
+                    // Events
+                    modalBtn.addEventListener('click', openModal);
+                    closeBtn.addEventListener('click', closeModal);
+                    window.addEventListener('click', outsideClick);
+
+                    // Open
+                    function openModal() {
+                    modal.style.display = 'block';
+                    }
+
+                    // Close
+                    function closeModal() {
+                    modal.style.display = 'none';
+                    }
+
+                    // Close If Outside Click
+                    function outsideClick(e) {
+                    if (e.target == modal) {
+                        modal.style.display = 'none';
+                    }
+                    }
+                        
+            
+    
+            </script>
+
+        </form>
+    </div>
+</body>
+
+</html>
